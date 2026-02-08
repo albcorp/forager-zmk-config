@@ -51,49 +51,91 @@
             quick-tap-ms = <200>;
             bindings = <&mo>, <&sabk>;
         };
-        lhm: left_homerow_mods {
+        lhm_p: left_homerow_pinky_finger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <75>;
-            retro-tap;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
-        };
-        lhm_alt: left_homerow_alt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <200>;
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
-            retro-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
         };
-        rhm: right_homerow_mods {
+        lhm_r: left_homerow_ring_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <175>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
+        };
+        lhm_m: left_homerow_middle_finger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <75>;
-            retro-tap;
+            require-prior-idle-ms = <100>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
+        };
+        lhm_i: left_homerow_index_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
+        };
+        rhm_i: right_homerow_index_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
+            hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
         };
-        rhm_alt: right_homerow_alt {
+        rhm_m: right_homerow_middle_finger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+        };
+        rhm_r: right_homerow_ring_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <175>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+        };
+        rhm_p: right_homerow_pinky_finger {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
-            retro-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
         };
@@ -113,8 +155,8 @@
         base {
             bindings = <
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-            &kp A           &lhm_alt LALT S &lhm LSHIFT D   &lhm  LCTRL F   &kp G                                           &kp H           &rhm RCTRL J    &rhm RSHIFT K   &rhm_alt RALT L &kp SEMI
-            &lhm LGUI Z     &kp X           &kp C           &kp V           &kp B                                           &kp N           &kp M           &kp COMMA       &kp DOT         &rhm RGUI FSLH
+            &kp A           &lhm_r LALT S   &lhm_m LSHIFT D &lhm_i LCTRL F  &kp G                                           &kp H           &rhm_i RCTRL J  &rhm_m RSHIFT K &rhm_r RALT L   &kp SEMI
+            &lhm_p LGUI Z   &kp X           &kp C           &kp V           &kp B                                           &kp N           &kp M           &kp COMMA       &kp DOT         &rhm_p RGUI FSLH
                                                                             &lt MSE ENTER   &lt SMSE TAB    &lt SNAV BSPC   &lt NAV SPACE
             >;
         };
@@ -167,9 +209,12 @@
 };
 
 &lt {
-    // require-prior-idle-ms = <100>;
+    flavor = "hold-preferred";
+    require-prior-idle-ms = <0>;
     tapping-term-ms = <150>;
     quick-tap-ms = <200>;
+    // retro-tap: disabled (default) -- no spurious taps on thumb keys
+    // hold-trigger-on-release: disabled (default) -- immediate layer activation
 };
 
 &mt {
