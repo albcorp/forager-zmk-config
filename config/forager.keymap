@@ -155,7 +155,7 @@
         base {
             bindings = <
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-            &kp A           &lhm_r LALT S   &lhm_m LSHIFT D &lhm_i LCTRL F  &kp G                                           &kp H           &rhm_i RCTRL J  &rhm_m RSHIFT K &rhm_r RALT L   &kp SEMI
+            &kp A           &lhm_r LALT S   &lhm_m LSHIFT D &lhm_i LCTRL F  &kp G                                           &kp H           &rhm_i RCTRL J  &rhm_m RSHIFT K &rhm_r LALT L   &kp SEMI
             &lhm_p LGUI Z   &kp X           &kp C           &kp V           &kp B                                           &kp N           &kp M           &kp COMMA       &kp DOT         &rhm_p RGUI FSLH
                                                                             &lt MSE ENTER   &lt SMSE TAB    &lt SNAV BSPC   &lt NAV SPACE
             >;
@@ -173,7 +173,7 @@
         nav {
             bindings = <
             &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &none           &none           &none           &none           &none
-            &kp ESC         &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT                                       &none           &kp RCTRL       &kp RSHIFT      &kp RALT        &none
+            &kp ESC         &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT                                       &none           &kp RCTRL       &kp RSHIFT      &kp LALT        &none
             &kp GRAVE       &kp F2          &none           &none           &kp BSLH                                        &none           &none           &none           &none           &kp RGUI
                                                                             &lt MSE ENTER   &kp TAB         &none           &trans
             >;
@@ -191,7 +191,7 @@
         snav {
             bindings = <
             &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                                       &none           &none           &none           &none           &none
-            &none           &kp HOME        &kp PGDN        &kp PGUP        &kp END                                         &none           &kp RCTRL       &kp RSHIFT      &kp RALT        &none
+            &none           &kp HOME        &kp PGDN        &kp PGUP        &kp END                                         &none           &kp RCTRL       &kp RSHIFT      &kp LALT        &none
             &kp TILDE       &kp F10         &none           &none           &kp PIPE                                        &none           &none           &none           &none           &kp RGUI
                                                                             &kp ENTER       &kp TAB         &trans          &none
             >;
